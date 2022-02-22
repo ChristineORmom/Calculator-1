@@ -6,14 +6,24 @@ const reader = readline.createInterface({
 });
 
 
-console.log('mathSymbol', mathSymbols);
+
 reader.question("What would you like to calculate?", function(input){
 	tokens = input.split(' ');
 	
-	mathSymbol = tokens[0];
-	num1 = Number(tokens[1]);
-	num2 = Number(tokens[2]);
+	mathSymbol = input[0];
+	num1 = input [1];
+	num2 = input [2];
 
+	if (mathSymbol=== "+"){console.log(num1 + num2);}
+	if (mathSymbol=== "-"){console.log(num1 - num2);}
+	
+
+	
+
+
+	console.log('mathSymbol', mathSymbol);
+	console.log('num1', num1);
+	console.log('num2', num2);
 
 	// This line closes the connection to the command line interface.
 	reader.close()
